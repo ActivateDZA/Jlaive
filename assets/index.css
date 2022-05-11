@@ -1,0 +1,123 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1F1A26;
+  border-radius: 5px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+html, body {
+	margin: 0px;
+	font-family: 'Poppins';
+	font-size: 15px;
+	color: #F6F8FA;
+	background-color: #1F1A26;
+	text-align: center;
+}
+
+.menubar {
+	background-color: #251A30;
+}
+
+.main {
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+li {
+	list-style: none;
+	padding-right: 25px;
+}
+
+h1 {
+	font-size: 45px;
+}
+
+.url {
+	color: #8aaacf;
+	text-decoration: none;
+}
+
+.url:hover {
+	animation: color-change 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.url:not(:hover) {
+	animation: color-change2 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.linktable {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contacttable {
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid white;
+	padding-left: 25px;
+	padding-right: 25px;
+	border-c
+}
+
+.menutable {
+	margin-right: auto;
+	margin-left: 25px;
+	padding: 0px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.mtelement {
+	padding: 0px;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 15px;
+}
+
+.ctelement {
+	padding: 0px;
+	font-size: 20px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.ffi {
+	opacity: 0;
+	animation: flyfadein 2s;
+	animation-fill-mode: forwards;
+}
+
+.ffi2 {
+	opacity: 0;
+	animation: flyfadein 2s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes color-change {
+  0% { color: #8aaacf; text-decoration: none; }
+  100% { color: #3c5069; }
+}
+
+@keyframes color-change2 {
+  0% { color: #3c5069; text-decoration: none; }
+  100% { color: #8aaacf; }
+}
+
+@keyframes flyfadein {
+	0% { opacity: 0; transform: translateY(100%); }
+	100% { opacity: 1; }
+}
