@@ -10,7 +10,9 @@ namespace Crybat
     {
         public static (string, string) GenCodeBat(string input, Random rng, int level = 5)
         {
-            string ret = string.Empty;
+            string setvarname = RandomString(4, rng);
+            string ret = $"set \"{setvarname}=set \"" + Environment.NewLine;
+
             string[] lines = input.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
             int amount = 5;
@@ -52,7 +54,7 @@ namespace Crybat
                 foreach (string s in splitted)
                 {
                     string name = RandomString(10, rng);
-                    setlines.Add($"set \"{name}={s}\"");
+                    setlines.Add($"%{setvarname}%\"{name}={s}\"");
                     vars.Add(name);
                 }
                 linevars.Add(vars.ToArray());
@@ -61,9 +63,7 @@ namespace Crybat
             setlines = new List<string>(setlines.OrderBy(x => rng.Next()));
             for (int i = 0; i < setlines.Count; i++)
             {
-                ret += setlines[i];
-                int r = rng.Next(0, 2);
-                ret += Environment.NewLine;
+                ret += setlines[i] + Environment.NewLine;
             }
 
             string varcalls = string.Empty;
