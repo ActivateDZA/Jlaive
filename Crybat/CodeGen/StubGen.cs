@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 
 using static Crybat.Utils;
@@ -10,9 +9,6 @@ namespace Crybat
     {
         public static string CreatePS(byte[] key, byte[] iv, EncryptionMode mode, Random rng)
         {
-            string frombase64string_var = RandomString(5, rng);
-            string readalltext_var = RandomString(5, rng);
-
             string stubcode = string.Empty;
             if (mode == EncryptionMode.AES)
             {
